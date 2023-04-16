@@ -1,0 +1,43 @@
+header {
+    background-color: #1f1f1f;
+    min-height: 10vh;
+    width: 100%;
+}
+
+.mainContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+
+.mainNavigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.mainNavigation__link {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    padding: 20px 0;
+    font-size: 35px;
+    font-weight: 600;
+    color: orange;
+    text-decoration: none;
+}
+
+.mainNavigation__link.active {
+    color: beige;
+    border-bottom-color: beige;
+}
+
+.mainNavigation__link:focus,
+.mainNavigation__link:hover {
+    color: beige;
+}
