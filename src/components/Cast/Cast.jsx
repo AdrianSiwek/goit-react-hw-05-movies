@@ -12,25 +12,25 @@ const Cast = () => {
 
 
     useEffect(() => {
-    const onActorsOfMovie = async () => {
-      setLoader(true);
-      try {
-        const actors = await fetchActors(movieId);
-        setActors(actors);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoader(false);
-      }
-    };
-    onActorsOfMovie();
-  }, [movieId]);
+        const onActorsInMoved = async () => {
+            setLoader(true);
+            try {
+                const actors = await fetchActors(movieId);
+                setActors(actors);
+            } catch (err) {
+                console.log(err)
+            } finally {
+                setLoader(false);
+             }
+        }
+        onActorsInMoved();
+     }, [movieId])
 
     return ( 
         <div>
             {loader && <Loader />}
             <ul className={style.castList}>
-                {actors.map((actor) => (
+                {actors.map(actor => (
                     <li className={style.castItem} key={actor.id}>
                     <img
                         width="200px"
