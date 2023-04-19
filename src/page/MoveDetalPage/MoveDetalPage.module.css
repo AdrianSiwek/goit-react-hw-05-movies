@@ -1,0 +1,25 @@
+.movieDetalis {
+    margin: 24px;
+    gap: 24px;
+    list-style: none;
+}
+
+.genreList img {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 40px;
+    padding: 0;
+    text-size-adjust: 90px;
+}
+
+.button {
+    width: 15%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: inherit;
+    font-weight: 800;
+    color: #e8e8e8;
+    background-color: #d9a148;
+}
