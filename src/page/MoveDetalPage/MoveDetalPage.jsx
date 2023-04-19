@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
-import fetchMovieById from '../../service/moveAPI';
+import {fetchMovieById} from '../../service/moveAPI';
 import Loader from 'components/Loader/Loader';
 import { FcLeft } from 'react-icons/fc';
 import style from './MoveDetalPage.module.css';

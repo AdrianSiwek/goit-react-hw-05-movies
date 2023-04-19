@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EditorList from '../EditorList/EditorList';
-import getTrendDay from '../../service/moveAPI';
+import {getTrendDay} from '../../service/moveAPI';
 import Loader from 'components/Loader/Loader';
 import style from './Page.module.css';
 

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import style from './EditorList.module.css';
 
-const EditorList = () => {
+const EditorList = ({movies}) => {
     const location = useLocation();
 
     return ( 
