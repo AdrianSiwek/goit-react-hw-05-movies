@@ -6,3 +6,12 @@
     font-size: 40px;
 }
 
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    margin-left: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #59889c;
+}

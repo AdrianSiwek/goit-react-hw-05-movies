@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import {fetchSearchByQuery} from '../../service/movieAPI';
+
 import Loader from 'components/Loader/Loader';
 import EditorList from '../EditorList/EditorList';
 import style from './MoviesPage.module.css'
+import { fetchSearchByQuery } from 'service/moveAPI';
 
 // const MoviesPage = () => {
 

@@ -4,8 +4,9 @@ import style from './Navigation.module.css'
 
 const Navigation = () => {
     return (
-        <div>
-            <nav>
+        <header>
+        <div className={style.mainContainer}>
+            <nav className={style.mainNavigation}>
                 <NavLink
                     to='/'
                     className={({isActive}) => isActive ? style.active: undefined}
@@ -19,7 +20,8 @@ const Navigation = () => {
                     Movies
                 </NavLink>
             </nav>
-        </div>
+            </div>
+            </header>
       );
 }
  
