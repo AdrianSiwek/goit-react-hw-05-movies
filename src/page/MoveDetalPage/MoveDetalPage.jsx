@@ -31,7 +31,7 @@ const MoveDetalPage = () => {
         <>
             <Link to={location?.state?.from ?? '/movies'}>
                 <button type="button">
-                    <FcLeft className={style.button} /> Back to Home
+                    <FcLeft className={style.buttonBack} /> Back to Home
                 </button>
             </Link>
             {loader && <Loader />}
@@ -59,7 +59,7 @@ const MoveDetalPage = () => {
         </div>
       )}
       <hr />
-      <div>
+      <div className={style.moreInformation}>
         <h3>Additional information</h3>
         <ul>
           <li>

@@ -18,7 +18,7 @@ header {
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 .mainNavigation__link {
@@ -28,16 +28,16 @@ header {
     padding: 20px 0;
     font-size: 35px;
     font-weight: 600;
-    color: orange;
+    color: rgb(243, 239, 231);
     text-decoration: none;
 }
 
 .mainNavigation__link.active {
-    color: beige;
-    border-bottom-color: beige;
+    color: rgb(131, 131, 9);
+    border-bottom-color: rgb(136, 136, 21);
 }
 
 .mainNavigation__link:focus,
 .mainNavigation__link:hover {
-    color: beige;
+    color: rgb(146, 146, 22);
 }

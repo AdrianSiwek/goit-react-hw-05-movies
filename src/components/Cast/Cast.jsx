@@ -84,7 +84,7 @@ const Cast = () => {
         {actors.map(actor => (
           <li className={style.castItem} key={actor.id}>
             <img
-              width="200px"
+              width="200"
               src={'https://image.tmdb.org/t/p/w500' + actor.profile_path}
               alt={actor.original_name}
             />

@@ -42,3 +42,11 @@
     color: #1f1f1f;
     background-color: orange;
 }
+
+input::placeholder {
+    color: getColor('header-text-color');
+}
+
+input:focus::placeholder {
+    opacity: 0%;
+}

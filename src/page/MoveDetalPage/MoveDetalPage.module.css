@@ -1,4 +1,5 @@
 .movieDetalis {
+    display: flex;
     margin: 24px;
     gap: 24px;
     list-style: none;
@@ -13,7 +14,7 @@
     text-size-adjust: 90px;
 }
 
-.button {
+.buttonBack {
     width: 15%;
     border-radius: 5px;
     cursor: pointer;
@@ -21,5 +22,10 @@
     font-style: inherit;
     font-weight: 800;
     color: #e8e8e8;
-    background-color: #d9a148;
+    background-color: #8c48d9;
+}
+
+.moreInformation{
+    display: inline-block;
+    margin-left: 25px;
 }
