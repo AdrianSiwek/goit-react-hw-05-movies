@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import {fetchReviews} from '../../service/moveAPI';
 import Loader from 'components/Loader/Loader';
-import Notiflix from "notiflix";
+// import Notiflix from "notiflix";
 
 const Reviews = () => {
     const { movieId } = useParams();
@@ -39,8 +39,8 @@ const Reviews = () => {
           </ul>
         </div>
             )}
-            {reviews.length === 0 && 
-            Notiflix.Notify.info("We don't have any reviews for this movie")}
+        {reviews.length === 0 && 
+          <div>We don't have any reviews for this movie</div>}
         </>
      );
 }

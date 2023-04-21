@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import {fetchMovieById} from '../../service/moveAPI';
 import Loader from 'components/Loader/Loader';
-import { FcLeft } from 'react-icons/fc';
 import style from './MoveDetalPage.module.css';
 
 const MoveDetalPage = () => {
@@ -29,9 +28,9 @@ const MoveDetalPage = () => {
     
     return ( 
         <>
-            <Link to={location?.state?.from ?? '/movies'}>
-                <button type="button">
-                    <FcLeft className={style.buttonBack} /> Back to Home
+            <Link to={location?.state?.from ?? '/'}>
+          <button type="button" className={style.buttonBack}>
+            Back to Home
                 </button>
             </Link>
             {loader && <Loader />}
