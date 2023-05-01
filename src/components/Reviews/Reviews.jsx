@@ -28,19 +28,19 @@ const Reviews = () => {
         <>
             {loader && <Loader />}
             {reviews.length !== 0 && (
-                <div>
-          <ul>
-            {reviews.map(review => (
-              <li key={review.id}>
-                <h2>Author: {review.author}</h2>
-                <p>{review.content}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+              <div>
+                <ul>
+                {reviews.map(review => (
+                  <li key={review.id}>
+                    <h2>Author: {review.author}</h2>
+                    <p>{review.content}</p>
+                  </li>
+                ))}
+                </ul>
+              </div>
             )}
-        {reviews.length === 0 && 
-          <div>We don't have any reviews for this movie</div>}
+            {reviews.length === 0 && 
+            <div>We don't have any reviews for this movie</div>}
         </>
      );
 }

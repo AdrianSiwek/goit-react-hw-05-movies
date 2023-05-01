@@ -1,14 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import {fetchMovieById} from '../../service/moveAPI';
 import Loader from 'components/Loader/Loader';
 import style from './MoveDetalPage.module.css';
+import { BackLink } from 'components/BackLink/BackLink';
 
-const MoveDetalPage = () => {
+
+const MoveDetalPage = ({searchMovie, to}) => {
     const { movieId } = useParams();
     const [movieInfo, setMovieInfo] = useState(null);
     const [loader, setLoader] = useState(false);
-    const location = useLocation();
+  const location = useLocation();
+  const backLinkHref = useRef(location.state?.from ?? "/");
+
 
 
     useEffect(() => {
@@ -28,11 +32,12 @@ const MoveDetalPage = () => {
     
     return ( 
         <>
-            <Link to={location?.state?.from ?? '/'}>
-          <button type="button" className={style.buttonBack}>
-            Back to Home
-                </button>
-            </Link>
+        <BackLink to={backLinkHref}>Go Back</BackLink>
+          {/* <button
+            type="button"
+            className={style.buttonBack}>
+            GO BACK
+          </button> */}
             {loader && <Loader />}
             {movieInfo && (
         <div className={style.movieDetalis}>
@@ -62,10 +67,10 @@ const MoveDetalPage = () => {
         <h3>Additional information</h3>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link to={'cast'} state={{ from: location }}>Cast</Link>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <Link to={'review'} state={{ from: location }}>Reviews</Link>
           </li>
         </ul>
         <hr />
@@ -74,5 +79,6 @@ const MoveDetalPage = () => {
         </>
      );
 }
+
  
 export default MoveDetalPage;
