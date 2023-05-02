@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import style from './EditorList.module.css';
 
 const EditorList = ({movies}) => {
-    const location = useLocation();
+  const location = useLocation();
+  console.log(location)
 
     return ( 
         <ul className={style.movieList}>

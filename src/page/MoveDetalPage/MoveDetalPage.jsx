@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import {fetchMovieById} from '../../service/moveAPI';
 import Loader from 'components/Loader/Loader';
 import style from './MoveDetalPage.module.css';
-import { BackLink } from 'components/BackLink/BackLink';
+// import { BackLink } from 'components/BackLink/BackLink';
 
 
 const MoveDetalPage = ({searchMovie, to}) => {
@@ -11,8 +11,7 @@ const MoveDetalPage = ({searchMovie, to}) => {
     const [movieInfo, setMovieInfo] = useState(null);
     const [loader, setLoader] = useState(false);
   const location = useLocation();
-  const backLinkHref = useRef(location.state?.from ?? "/");
-
+console.log(location)
 
 
     useEffect(() => {
@@ -30,16 +29,19 @@ const MoveDetalPage = ({searchMovie, to}) => {
         onDetalMovie();
     }, [movieId])
     
-    return ( 
-        <>
-        <BackLink to={backLinkHref}>Go Back</BackLink>
-          {/* <button
-            type="button"
-            className={style.buttonBack}>
-            GO BACK
-          </button> */}
-            {loader && <Loader />}
-            {movieInfo && (
+
+
+return (
+    <>
+      <Link to={location?.state?.from ?? '/movies'}>
+      <button
+        type="button"
+        className={style.buttonBack}>
+        Go Back
+        </button>
+      </Link>
+      {loader && <Loader />}
+      {movieInfo && (
         <div className={style.movieDetalis}>
           <img
             width="300px"
@@ -63,22 +65,22 @@ const MoveDetalPage = ({searchMovie, to}) => {
         </div>
       )}
       <hr />
-      <div className={style.moreInformation}>
+      <div>
         <h3>Additional information</h3>
         <ul>
           <li>
-            <Link to={'cast'} state={{ from: location }}>Cast</Link>
+          <Link to={"cast"} state={{from: location.state?.from}}>Cast</Link>
           </li>
           <li>
-            <Link to={'review'} state={{ from: location }}>Reviews</Link>
+          <Link to={"reviews"} state={{from: location.state?.from}} >Reviews</Link>
           </li>
         </ul>
         <hr />
         <Outlet />
       </div>
-        </>
-     );
-}
+    </>
+  );
+};
 
  
 export default MoveDetalPage;

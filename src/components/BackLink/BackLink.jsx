@@ -19,9 +19,9 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export const BackLink = ({ to, children }) => {
+export const BackLink = ({ locationBack, children }) => {
   return (
-    <StyledLink to={to}>
+    <StyledLink to={locationBack}>
       <HiArrowLeft size="24" />
       {children}
     </StyledLink>
